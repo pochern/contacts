@@ -1,0 +1,13 @@
+{
+  "extends": [
+    "standard",
+    "plugin:react/recommended"
+  ],
+  "rules": {
+    "semi": [
+      "error",
+      "never"
+    ],
+    "react/prop-types": "off"
+  }
+}
