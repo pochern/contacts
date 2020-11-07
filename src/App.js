@@ -12,13 +12,13 @@ const contacts = [
     id: 'michael',
     name: 'Michael Jackson',
     email: 'michael@reacttraining.com',
-    avatar: 'http://localhost:5001/michael'
+    avatarURL: 'http://localhost:5001/michael.jpg'
   },
   {
     id: 'tyler',
     name: 'Tyler McGinnis',
     email: 'tyler@reacttraining.com',
-    avatar: 'http://localhost:5001/tyler'
+    avatarURL: 'http://localhost:5001/tyler.jpg'
   }
 ]
 
