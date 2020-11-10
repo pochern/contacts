@@ -6,7 +6,7 @@ import * as ContactsAPI from './utils/ContactsAPI'
 class App extends Component {
   state = {
     contacts: [],
-    screen: 'create' // to switch between list and create
+    screen: 'list' // to switch between list and create
   }
 
   componentDidMount () {
@@ -27,7 +27,13 @@ class App extends Component {
     return (
       <div>
         {this.state.screen === 'list' && (
-          <ListContacts onDeleteContact={this.removeContact} contacts={this.state.contacts} />
+          <ListContacts
+            onDeleteContact={this.removeContact}
+            contacts={this.state.contacts}
+            onNavigate={() => {
+              this.setState({ screen: 'create' })
+            }}
+          />
         )}
         {this.state.screen === 'create' && (
           <CreateContact />
