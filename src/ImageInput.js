@@ -69,16 +69,16 @@ class ImageInput extends React.Component {
     this.setState({ value: '' })
   }
 
-  componentDidMount() {
+  componentDidMount () {
     this.canvas = document.createElement('canvas')
     this.fileInput.form.addEventListener('reset', this.handleFormReset)
   }
 
-  componentWillUnmount() {
+  componentWillUnmount () {
     this.fileInput.form.removeEventListener('reset', this.handleFormReset)
   }
 
-  render() {
+  render () {
     const { className, name } = this.props
     const { value } = this.state
 
@@ -97,7 +97,7 @@ class ImageInput extends React.Component {
       <div className={className} style={style}>
         <input type="hidden" name={name} value={value} />
         <input
-          ref={node => this.fileInput = node}
+          ref={ node => { this.fileInput = node } }
           type="file"
           onChange={this.handleFileChange}
           style={{
